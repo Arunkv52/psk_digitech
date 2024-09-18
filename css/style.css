@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=New+Amsterdam&display=swap');
+
+
+:root {
+    --main-bg-color: #000000;
+    --main-text-color: #ffffff;
+    --light-white: #494949;
+    --red: #ff0303;
+    --yellow: #ffc109;
+    --light-grey: #0f0f0f;
+    --main-font-size: 16px;
+    --main-font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+a {
+    color: var(--main-text-color) !important;
+    text-decoration: none !important;
+
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--main-bg-color) !important;
+}
+
+/* Common styles */
+.psk-btn a {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.psk-btn i {
+    background-color: #af01c8;
+    padding: 0.5%;
+}
+
+
+/* cursor pointer start */
+#cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px white;
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+        height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+}
+
+#cursor:hover a {
+    cursor: pointer;
+}
+
+/* Cursor pointer end */
+
+
+
+/* Scroll bar design */
+/* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 5px;
+    /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--main-bg-color);
+    /* Background color of the track */
+    border-radius: 2px;
+    /* Optional: rounded corners */
+}
+
+/* Handle (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    border: 3px solid var(--nav-red);
+    /* Adds some space around thumb */
+}
+
+/* Handle (Thumb) on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Color of the thumb on hover */
+}
+
+/* Optional: Styling scrollbar buttons */
+::-webkit-scrollbar-button {
+    background: #888;
+    height: 16px;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+    background: #555;
+    /* Top button */
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background: #555;
+    /* Bottom button */
+}
+
+/* Optional: Styling scrollbar corner */
+::-webkit-scrollbar-corner {
+    background-color: #f1f1f1;
+}
+
+/* banner start */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: -100px;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    /* Optional: for slightly darkened overlay */
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 85px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+/* Section 2 start */
+#se-text h2 {
+    font-size: 52px;
+    color: var(--main-text-color);
+    padding-bottom: 10px;
+}
+
+#se-text p {
+    font-size: 16px;
+    color: var(--main-text-color);
+    font-weight: 300;
+}
+
+.se-2-h3 h3 {
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    font-size: 104px;
+    letter-spacing: -4px;
+    font-weight: 700;
+    line-height: 115px;
+}
+
+
+/* Section 3 start */
+.s3-box-1 {
+    background: url(../assets/Images/New/retinal-biometrics-technology-with-man-s-eye-digital-remix.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding: 10%;
+}
+
+/* Section 4 start */
+div#sec-id-4 h6 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 57px;
+}
+
+div#sec-id-4 p {
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    padding: 0 20%;
+}
+
+video#sec-4-video {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+div#sec-4-2 h6 {
+    font-size: 35px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#sec-4-2 p {
+    font-size: 15px;
+    color: #ffffff;
+    letter-spacing: 0;
+}
+
+/* Section 5 start */
+h5.client-head,
+#ct-item h6 {
+    font-size: 50px;
+    color: #ffffff;
+    letter-spacing: -2px;
+    padding-bottom: 20px;
+}
+
+.logo-sec img {
+    width: 282px;
+    height: 225px;
+    object-fit: cover;
+}
+
+
+/* Section 6 start */
+section.sec-6 {
+    background-color: #0f0f0f;
+    padding: 38px 0;
+}
+
+
+
+/* About us page */
+
+
+/* Accordion start */
+.accordion {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 0 20px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid;
+    border-color: var(--light-white);
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.panel {
+    color: var(--main-text-color);
+    font-size: 20px;
+    padding: 20px 0;
+    display: none;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+#Acc-Head {
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--main-text-color);
+}
+
+
+
+/* Form start */
+#name,
+#email,
+#tel,
+#comments,
+#option {
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--light-white);
+    margin: 0 0 2% 0;
+}
+
+#name:focus,
+#email:focus,
+#tel:focus,
+#option:focus,
+#comments:focus {
+    color: var(--main-text-color);
+    border: none !important;
+}
+
+option {
+    background-color: var(--main-bg-color);
+    border: none;
+}
+
+input#submit {
+    background-color: red;
+    padding: 1% 4%;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+/* Product page start */
+.cctv-bg {
+    background: url(../assets/Images/New/digital-tablet-screen-with-smart-home-controller-wooden-table.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 580px;
+    background-size: cover;
+    position: relative;
+    top: -65px;
+    z-index: -1;
+}
+
+
+
+
+
+
+/* Swiper js changes */
+.swiper-button-next {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 50%);
+    width: calc(var(--swiper-navigation-size) / 44* 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff0000;
+    background-color: var(--main-text-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+img.w-logo {
+    width: 215px;
+    height: auto;
+}
+
+.enroll-now {
+    background-color: var(--yellow);
+    width: max-content;
+    padding: 11px 22px 1px 22px;
+    border-radius: 50px;
+}
+
+.enroll-now a p {
+    font-size: 13px;
+    color: var(--main-bg-color);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.enroll-now a {
+    text-decoration: none;
+}
+
+.f-col-1 h5 {
+    font-size: 29px;
+    font-weight: 400;
+    padding: 25px 0;
+    letter-spacing: -1px;
+}
+
+.f-d-flex {
+    display: flex;
+    justify-content: flex-start;
+    gap: 37px;
+}
+
+.f-w50 {
+    width: 75%;
+}
+
+.f-w25 {
+    width: 25%;
+}
+
+.f-col-2 h5,
+.f-col-3 h5 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--yellow);
+}
+
+.f-col-2 ul,
+.f-col-3 p {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-size: 14px;
+}
+
+.f-soc ul {
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.row.d-flex.pt-3.rw-f2 p {
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.rw-f1-text ul li,
+.rw-f1-text p,
+.f-soc ul li {
+    padding: 3px 0;
+    font-size: 14px;
+    font-weight: 400;
+}
